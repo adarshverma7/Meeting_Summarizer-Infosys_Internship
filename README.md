@@ -99,7 +99,7 @@ Copy code
 - `smtplib`
 
 Ensure `pip` is updated to the latest version for smooth installation:
-pip install --upgrade pip
+`pip install --upgrade pip`
 
 yaml
 Copy code
@@ -119,14 +119,14 @@ FFmpeg is required for audio and video processing. Install it based on your oper
 
 - **macOS**:  
   Install FFmpeg using Homebrew:
-brew install ffmpeg
+`brew install ffmpeg`
 
 markdown
 Copy code
 
 - **Linux**:  
 Install FFmpeg using the following command:
-sudo apt-get install ffmpeg
+`sudo apt-get install ffmpeg`
 
 yaml
 Copy code
@@ -135,7 +135,7 @@ Copy code
 
 ### 4. Set Up NLTK
 NLTK is used for text processing. After installing NLTK, download the necessary corpora:
-import nltk nltk.download('punkt')
+`import nltk nltk.download('punkt')`
 
 yaml
 Copy code
@@ -144,7 +144,7 @@ Copy code
 
 ### 5. Install Whisper
 Whisper is used for transcription. Install it via pip:
-pip install whisper
+`pip install whisper`
 
 yaml
 Copy code
@@ -156,7 +156,7 @@ OpenAI API is used for summarization and action plan generation.
 
 1. Sign up for an API key at [OpenAI](https://platform.openai.com/signup/).  
 2. Add your API key to the script (or environment variables). Example:
-openai.api_key = "your_api_key_here"
+`openai.api_key = "your_api_key_here"`
 
 yaml
 Copy code
@@ -165,7 +165,7 @@ Copy code
 
 ### 7. Configure Email Sending
 The `smtplib` library is used for sending emails. Configure the script with your email credentials:
-email_sender = "your_email@gmail.com" email_password = "your_password" email_recipients = ["recipient1@gmail.com", "recipient2@gmail.com"]
+`email_sender = "your_email@gmail.com" email_password = "your_password" email_recipients = ["recipient1@gmail.com", "recipient2@gmail.com"]`
 
 yaml
 Copy code
@@ -176,13 +176,13 @@ Copy code
 
 ### 8. Install Streamlit
 Streamlit is used for building the user interface. Install it with:
-pip install streamlit
+`pip install streamlit`
 
 arduino
 Copy code
 
 To run the Streamlit app, use:
-streamlit run your_app.py
+`streamlit run your_app.py`
 
 yaml
 Copy code
@@ -198,7 +198,7 @@ If deploying to the cloud:
 
 ### 10. Verify Everything Works
 Test the installation by running the main script:
-python Meeting_Summarizer.py
+`python Meeting_Summarizer.py`
 
 css
 Copy code

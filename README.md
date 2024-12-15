@@ -77,9 +77,10 @@ Follow these steps to set up the project on your local machine:
 
 ### 1. Clone the Repository
 Clone the project repository to your local system:
-```bash
+bash
 git clone https://github.com/your-username/Meeting-Summarizer.git
 cd Meeting-Summarizer
+
 2. Install Required Python Dependencies
 Install all the required Python libraries listed in the requirements.txt file:
 
@@ -98,6 +99,7 @@ Ensure pip is updated to the latest version for smooth installation:
 bash
 Copy code
 pip install --upgrade pip
+
 3. Install FFmpeg
 FFmpeg is required for audio and video processing. Install it based on your operating system:
 
@@ -121,6 +123,7 @@ Install FFmpeg using the following command:
 bash
 Copy code
 sudo apt-get install ffmpeg
+
 4. Set Up NLTK
 NLTK is used for text processing. After installing NLTK, download the necessary corpora:
 
@@ -128,12 +131,14 @@ python
 Copy code
 import nltk
 nltk.download('punkt')
+
 5. Install Whisper
 Whisper is used for transcription. Install it via pip:
 
 bash
 Copy code
 pip install whisper
+
 6. Set Up OpenAI API
 OpenAI API is used for summarization and action plan generation.
 
@@ -142,6 +147,7 @@ Add your API key to the script (or environment variables). Example:
 python
 Copy code
 openai.api_key = "your_api_key_here"
+
 7. Configure Email Sending
 The smtplib library is used for sending emails. Configure the script with your email credentials:
 

@@ -77,95 +77,130 @@ Follow these steps to set up the project on your local machine:
 
 ### 1. Clone the Repository
 Clone the project repository to your local system:
-bash
-git clone https://github.com/your-username/Meeting-Summarizer.git
-cd Meeting-Summarizer
+git clone https://github.com/your-username/Meeting-Summarizer.git cd Meeting-Summarizer
 
-2. Install Required Python Dependencies
-Install all the required Python libraries listed in the requirements.txt file:
-
-bash
+yaml
 Copy code
+
+---
+
+### 2. Install Required Python Dependencies
+Install all the required Python libraries listed in the `requirements.txt` file:
 pip install -r requirements.txt
-Key Dependencies:
 
-ffmpeg-python
-pydub
-nltk
-openai
-smtplib
-Ensure pip is updated to the latest version for smooth installation:
-
-bash
+markdown
 Copy code
+
+**Key Dependencies:**
+- `ffmpeg-python`
+- `pydub`
+- `nltk`
+- `openai`
+- `smtplib`
+
+Ensure `pip` is updated to the latest version for smooth installation:
 pip install --upgrade pip
 
-3. Install FFmpeg
+yaml
+Copy code
+
+---
+
+### 3. Install FFmpeg
 FFmpeg is required for audio and video processing. Install it based on your operating system:
 
-Windows:
+- **Windows**:  
+  1. Download FFmpeg from [ffmpeg.org](https://ffmpeg.org).  
+  2. Extract the files and add the FFmpeg binary to your system PATH.  
+  3. Verify installation by running:
+     ```
+     ffmpeg -version
+     ```
 
-Download FFmpeg from ffmpeg.org.
-Extract the files and add the FFmpeg binary to your system PATH.
-Verify installation by running:
-bash
-Copy code
-ffmpeg -version
-macOS:
-Install FFmpeg using Homebrew:
-
-bash
-Copy code
+- **macOS**:  
+  Install FFmpeg using Homebrew:
 brew install ffmpeg
-Linux:
-Install FFmpeg using the following command:
 
-bash
+markdown
 Copy code
+
+- **Linux**:  
+Install FFmpeg using the following command:
 sudo apt-get install ffmpeg
 
-4. Set Up NLTK
+yaml
+Copy code
+
+---
+
+### 4. Set Up NLTK
 NLTK is used for text processing. After installing NLTK, download the necessary corpora:
+import nltk nltk.download('punkt')
 
-python
+yaml
 Copy code
-import nltk
-nltk.download('punkt')
 
-5. Install Whisper
+---
+
+### 5. Install Whisper
 Whisper is used for transcription. Install it via pip:
-
-bash
-Copy code
 pip install whisper
 
-6. Set Up OpenAI API
+yaml
+Copy code
+
+---
+
+### 6. Set Up OpenAI API
 OpenAI API is used for summarization and action plan generation.
 
-Sign up for an API key at OpenAI.
-Add your API key to the script (or environment variables). Example:
-python
-Copy code
+1. Sign up for an API key at [OpenAI](https://platform.openai.com/signup/).  
+2. Add your API key to the script (or environment variables). Example:
 openai.api_key = "your_api_key_here"
 
-7. Configure Email Sending
-The smtplib library is used for sending emails. Configure the script with your email credentials:
-
-python
+yaml
 Copy code
-email_sender = "your_email@gmail.com"
-email_password = "your_password"
-email_recipients = ["recipient1@gmail.com", "recipient2@gmail.com"]
-Note: For Gmail, ensure that "Allow less secure apps" is enabled or use an app-specific password for better security.
 
-8. Install Streamlit
+---
+
+### 7. Configure Email Sending
+The `smtplib` library is used for sending emails. Configure the script with your email credentials:
+email_sender = "your_email@gmail.com" email_password = "your_password" email_recipients = ["recipient1@gmail.com", "recipient2@gmail.com"]
+
+yaml
+Copy code
+
+**Note**: For Gmail, ensure that "Allow less secure apps" is enabled or use an app-specific password for better security.
+
+---
+
+### 8. Install Streamlit
 Streamlit is used for building the user interface. Install it with:
-
-bash
-Copy code
 pip install streamlit
-To run the Streamlit app, use:
 
-bash
+arduino
 Copy code
+
+To run the Streamlit app, use:
 streamlit run your_app.py
+
+yaml
+Copy code
+
+---
+
+### 9. Set Up Cloud Deployment (Optional)
+If deploying to the cloud:
+- **AWS or Azure**: Follow the respective deployment guides for setting up Python applications.
+- **Streamlit Cloud**: Push your code to GitHub and deploy using [Streamlit Cloud](https://streamlit.io/cloud).
+
+---
+
+### 10. Verify Everything Works
+Test the installation by running the main script:
+python Meeting_Summarizer.py
+
+css
+Copy code
+
+Output files (audio, transcripts, summaries, and action plans) will be saved in their respective directories, and emails will be sent to the predefined recipients.

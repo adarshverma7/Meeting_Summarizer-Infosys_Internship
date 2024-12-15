@@ -31,13 +31,6 @@ This project aims to develop a web application that generates concise summaries 
 
 ---
 
-## Project Screenshots
-
-### Summarizer Interface  
-![Summarizer](<img width="960" alt="3" src="5 ">)
-
----
-
 ## Audio Processing and Text Preprocessing
 
 ### Audio Processing  

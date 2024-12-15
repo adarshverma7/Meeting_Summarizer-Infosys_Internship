@@ -71,78 +71,95 @@ These preprocessing steps optimize the performance of summarization and sentimen
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/Meeting-Summarizer.git
-   cd Meeting-Summarizer
-Install the required dependencies:
+Follow these steps to set up the project on your local machine:
+
+---
+
+### 1. Clone the Repository
+Clone the project repository to your local system:
+```bash
+git clone https://github.com/your-username/Meeting-Summarizer.git
+cd Meeting-Summarizer
+2. Install Required Python Dependencies
+Install all the required Python libraries listed in the requirements.txt file:
 
 bash
 Copy code
 pip install -r requirements.txt
-Install ffmpeg:
+Key Dependencies:
 
-Windows: Download from ffmpeg.org and add it to the system PATH.
-macOS: Install via Homebrew:
+ffmpeg-python
+pydub
+nltk
+openai
+smtplib
+Ensure pip is updated to the latest version for smooth installation:
+
+bash
+Copy code
+pip install --upgrade pip
+3. Install FFmpeg
+FFmpeg is required for audio and video processing. Install it based on your operating system:
+
+Windows:
+
+Download FFmpeg from ffmpeg.org.
+Extract the files and add the FFmpeg binary to your system PATH.
+Verify installation by running:
+bash
+Copy code
+ffmpeg -version
+macOS:
+Install FFmpeg using Homebrew:
+
 bash
 Copy code
 brew install ffmpeg
 Linux:
+Install FFmpeg using the following command:
+
 bash
 Copy code
 sudo apt-get install ffmpeg
-Usage
-Place your video files in the input_videos directory.
-Run the main script:
+4. Set Up NLTK
+NLTK is used for text processing. After installing NLTK, download the necessary corpora:
+
+python
+Copy code
+import nltk
+nltk.download('punkt')
+5. Install Whisper
+Whisper is used for transcription. Install it via pip:
+
 bash
 Copy code
-python final_optimized_app.py
-The processed audio, transcriptions, summaries, and plans of action will be saved in their respective directories.
-The email containing the summarized information and plan of action will be sent to predefined recipients.
-Tools and Frameworks
-Frameworks/Libraries:
-Streamlit: For building the user interface.
-NLTK (Natural Language Toolkit): For text preprocessing and analysis.
-OpenAI API: For summarization and action plan generation.
-Whisper: For speech-to-text transcription.
-Tools/Platforms:
-GitHub: For version control and collaborative development.
-VS Code: Integrated Development Environment (IDE).
-AWS/Azure: For deploying the application with scalability and reliability.
-Microsoft OneDrive and SMTP (for Gmail): For email integration and file management.
-Configuration
-Modify the script to set up your email credentials and recipients in the following section:
+pip install whisper
+6. Set Up OpenAI API
+OpenAI API is used for summarization and action plan generation.
+
+Sign up for an API key at OpenAI.
+Add your API key to the script (or environment variables). Example:
+python
+Copy code
+openai.api_key = "your_api_key_here"
+7. Configure Email Sending
+The smtplib library is used for sending emails. Configure the script with your email credentials:
 
 python
 Copy code
 email_sender = "your_email@gmail.com"
 email_password = "your_password"
 email_recipients = ["recipient1@gmail.com", "recipient2@gmail.com"]
-Contributing
-Contributions are welcome! Please follow these steps:
+Note: For Gmail, ensure that "Allow less secure apps" is enabled or use an app-specific password for better security.
 
-Fork the repository.
-Create a new branch:
+8. Install Streamlit
+Streamlit is used for building the user interface. Install it with:
+
 bash
 Copy code
-git checkout -b feature/YourFeature
-Commit your changes:
+pip install streamlit
+To run the Streamlit app, use:
+
 bash
 Copy code
-git commit -m "Add YourFeature"
-Push the branch:
-bash
-Copy code
-git push origin feature/YourFeature
-Open a pull request.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Acknowledgements
-OpenAI: For Whisper and GPT-3.5 Turbo models.
-FFmpeg: For high-quality audio processing.
-Infosys: For the internship opportunity and project support.
-javascript
-Copy code
-
-You can adjust placeholders like `your-username`, `your_email@gmail.com`, a
+streamlit run your_app.py
